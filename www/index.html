@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <title>Calculadora</title>
+    </head>
+    <body>
+    	<div class="container" style="height: 100vh;">
+    		<div class="row">
+    			<textarea name="visor" id="visor" class="form-control" placeholder="0" ></textarea>
+    		</div>
+    		<div class="row justify-content-center">
+    			<button onclick="adicionar(1)" class="btn botao_numero" value="1">1</button>
+    			<button onclick="adicionar(2)" class="btn botao_numero" value="2">2</button>
+    			<button onclick="adicionar(3)" class="btn botao_numero" value="3">3</button>
+    			<button onclick="dividir()" class="btn botao_operador" value="/" id="/">/</button>
+
+    			<button onclick="adicionar(4)" class="btn botao_numero" value="4">4</button>
+    			<button onclick="adicionar(5)" class="btn botao_numero" value="5">5</button>
+    			<button onclick="adicionar(6)" class="btn botao_numero" value="6">6</button>
+    			<button onclick="multiplicar()" class="btn botao_operador" value="*" id="*">*</button>
+
+    			<button onclick="adicionar(7)" class="btn botao_numero" value="7">7</button>
+    			<button onclick="adicionar(8)" class="btn botao_numero" value="8">8</button>
+    			<button onclick="adicionar(9)" class="btn botao_numero" value="9">9</button>
+    			<button onclick="subtrair()" class="btn botao_operador" value="-" id="-">-</button>
+
+    			<button onclick="" class="btn botao_operador" value=".">.</button>
+    			<button onclick="adicionar(0)" class="btn botao_numero" value="0">0</button>
+    			<button onclick="limpar()" class="btn botao_numero" value="CE">CE</button>
+    			<button onclick="somar()" class="btn botao_operador" value="+" id="+">+</button>
+    			<button onclick="igual()" class="btn btn-success igual col" value="=">=</button>
+    		</div>
+    	</div>
+    	<style type="text/css">
+    		@font-face{
+    			font-family: 'Nanum Gothic';
+    			src: url(fonts/NanumGothic-Regular.ttf);
+    		}
+    		body{
+    			font-family: 'Nanum Gothic';
+    			font-size:36px;
+    		}
+    		.botao_numero, .botao_operador{
+    			font-family: 'Nanum Gothic';
+				width: 22%;
+				margin: 5px;
+				height: 12vh;
+			}
+			.igual{
+				font-family: 'Nanum Gothic';
+				margin: 5px;
+				height: 12vh;
+			}
+			#visor {
+				font-family: 'Nanum Gothic';
+				height: 30vh;
+				appearance: textfield;
+				-moz-appearance: textfield;
+				margin: 5px;
+				direction: rtl;
+				border: none;
+				display: flex;
+				resize: none;
+				pointer-events: none;
+				font-size: 36px;
+
+			}
+    	</style>
+    	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/funcoes.js"></script>
+
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    </body>
+</html>
