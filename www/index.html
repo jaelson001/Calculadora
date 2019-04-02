@@ -9,7 +9,7 @@
     <body>
     	<div class="container" style="height: 100vh;">
     		<div class="row">
-    			<textarea name="visor" id="visor" class="form-control" placeholder="0" ></textarea>
+    			<textarea name="visor" id="visor" class="form-control"></textarea>
     		</div>
     		<div class="row justify-content-center">
     			<button onclick="adicionar(1)" class="btn botao_numero" value="1">1</button>
@@ -49,6 +49,10 @@
 				margin: 5px;
 				height: 12vh;
 			}
+			.botao_numero:active, .botao_operador:active{
+				background:#1473e7;
+				color: #fff;
+			}
 			.igual{
 				font-family: 'Nanum Gothic';
 				margin: 5px;
@@ -57,16 +61,13 @@
 			#visor {
 				font-family: 'Nanum Gothic';
 				height: 30vh;
-				appearance: textfield;
-				-moz-appearance: textfield;
 				margin: 5px;
-				direction: rtl;
 				border: none;
 				display: flex;
 				resize: none;
 				pointer-events: none;
 				font-size: 36px;
-
+				text-align: right;
 			}
     	</style>
     	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">

@@ -5,7 +5,7 @@ var operador = '+';
 function adicionar(valor){
 	atual = atual * 10;
 	atual = atual + valor;
-	document.getElementById("visor").value = atual;
+	document.getElementById("visor").value += valor;
 }
 
 function somar(){
@@ -23,7 +23,7 @@ function somar(){
 			total = total / atual;
 			break;
 	}
-	document.getElementById("visor").value = '';
+	document.getElementById("visor").value = document.getElementById("visor").value + " + ";
 	atual = 0;
 }
 
@@ -42,7 +42,7 @@ function subtrair(){
 			total = total / atual;
 			break;
 	}
-	document.getElementById("visor").value = '';
+	document.getElementById("visor").value = document.getElementById("visor").value + " - ";
 	atual = 0;
 	operador = '-';
 }
@@ -62,7 +62,7 @@ function multiplicar(){
 			total = total / atual;
 			break;
 	}
-	document.getElementById("visor").value = '';
+	document.getElementById("visor").value = document.getElementById("visor").value + " * ";
 	atual = 0;
 	operador = '*';
 }
@@ -82,7 +82,7 @@ function dividir(){
 			total = total / atual;
 			break;
 	}
-	document.getElementById("visor").value = '';
+	document.getElementById("visor").value = document.getElementById("visor").value + " / ";
 	atual = 0;
 	operador = '/';
 }
@@ -102,7 +102,7 @@ function igual(){
 			total = total / atual;
 			break;
 	}
-	document.getElementById("visor").value = total;
+	document.getElementById("visor").value = document.getElementById("visor").value + '\n' + total;
 	atual = 0;
 	operador = '+';
 }
