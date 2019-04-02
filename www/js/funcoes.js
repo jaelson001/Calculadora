@@ -125,7 +125,9 @@ function igual(){
 				total = total / atual;
 				break;
 		}
-		document.getElementById("visor").value = document.getElementById("visor").value + '\n' + total;
+		var x = document.getElementById("visor").value;
+		x = x.replace(/\/=/g, '/');
+		document.getElementById("visor").value = x + '\n =' + total;
 		atual = 0;
 		operador = '+';
 		resultado = true;
