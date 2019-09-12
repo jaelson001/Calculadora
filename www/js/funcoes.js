@@ -3,6 +3,23 @@ var atual = 0;
 var operador = '+';
 var resultado = false;
 
+
+function operar(){
+	switch(operador){
+		case '+':
+			total = total + atual;
+			break;
+		case '-':
+			total = total - atual;
+			break;
+		case '*':
+			total = total * atual;
+			break;
+		case '/':
+			total = total / atual;
+			break;
+	}
+}
 function adicionar(valor){
 	
 	if(resultado == true && atual == 0){
@@ -19,20 +36,7 @@ function adicionar(valor){
 }
 
 function somar(){
-		switch(operador){
-			case '+':
-				total = total + atual;
-				break;
-			case '-':
-				total = total - atual;
-				break;
-			case '*':
-				total = total * atual;
-				break;
-			case '/':
-				total = total / atual;
-				break;
-		}
+		operar();
 		document.getElementById("visor").value = document.getElementById("visor").value + " + ";
 		atual = 0;
 		if(resultado == true && atual == 0){
@@ -41,20 +45,7 @@ function somar(){
 }
 
 function subtrair(){
-		switch(operador){
-			case '+':
-				total = total + atual;
-				break;
-			case '-':
-				total = total - atual;
-				break;
-			case '*':
-				total = total * atual;
-				break;
-			case '/':
-				total = total / atual;
-				break;
-		}
+		operar();
 		document.getElementById("visor").value = document.getElementById("visor").value + " - ";
 		atual = 0;
 		operador = '-';
@@ -64,20 +55,7 @@ function subtrair(){
 }
 
 function multiplicar(){
-		switch(operador){
-			case '+':
-				total = total + atual;
-				break;
-			case '-':
-				total = total - atual;
-				break;
-			case '*':
-				total = total * atual;
-				break;
-			case '/':
-				total = total / atual;
-				break;
-		}
+		operar();
 		document.getElementById("visor").value = document.getElementById("visor").value + " * ";
 		atual = 0;
 		operador = '*';
@@ -87,20 +65,7 @@ function multiplicar(){
 }
 
 function dividir(){
-		switch(operador){
-			case '+':
-				total = total + atual;
-				break;
-			case '-':
-				total = total - atual;
-				break;
-			case '*':
-				total = total * atual;
-				break;
-			case '/':
-				total = total / atual;
-				break;
-		}
+		operar();
 		document.getElementById("visor").value = document.getElementById("visor").value + " / ";
 		atual = 0;
 		operador = '/';
@@ -111,20 +76,7 @@ function dividir(){
 
 function igual(){
 	if(resultado == false){
-		switch(operador){
-			case '+':
-				total = total + atual;
-				break;
-			case '-':
-				total = total - atual;
-				break;
-			case '*':
-				total = total * atual;
-				break;
-			case '/':
-				total = total / atual;
-				break;
-		}
+		operar();
 		var x = document.getElementById("visor").value;
 		x = x.replace(/\/=/g, '/');
 		document.getElementById("visor").value = x + '\n =' + total;
