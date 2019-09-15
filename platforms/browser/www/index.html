@@ -28,16 +28,16 @@
     			<button onclick="adicionar(9)" class="btn botao_numero" >9</button>
     			<button onclick="subtrair()" class="btn botao_operador"  id="-">-</button>
 
-    			<button onclick="" class="btn botao_operador" > </button>
-    			<button onclick="adicionar(0)" class="btn botao_numero" >0</button>
     			<button onclick="limpar()" class="btn botao_numero" >CE</button>
+    			<button onclick="adicionar(0)" class="btn botao_numero" >0</button>
+    			<button onclick="igual()" class="btn botao_operador btn-success igual">=</button>
     			<button onclick="somar()" class="btn botao_operador" id="+">+</button>
-    			<button onclick="igual()" class="btn btn-success igual col-sm-12 col-md-12" >=</button>
+    			
     		</div>
     	</div>
     	<style type="text/css">
     		@font-face{
-    			font-family: 'Nanum Gothic';
+    			font-family: 'Nanum Gothic', 'Arial';
     			src: url(fonts/NanumGothic-Regular.ttf);
     		}
             *:focus {
@@ -47,25 +47,34 @@
     			font-family: 'Nanum Gothic';
     			font-size:36px;
     		}
-    		.botao_numero, .botao_operador{
-    			font-family: 'Nanum Gothic';
-				width: 22%;
-				margin: 5px;
+    		.botao_numero, .botao_operador {
+				border-radius: 0px !important;
+				font-family: 'Nanum Gothic', 'Arial';
+				width: 25%;
+				margin: 0px;
 				height: 12vh;
+				font-size: 20pt !important;
+			}
+			.botao_numero {
+				background: #ffffff !important;
+				color: #456;
+			}
+			.botao_operador{
+				background: #dddddd;
 			}
 			.botao_numero:active, .botao_operador:active{
 				background:#1473e7;
 				color: #fff;
 			}
 			.igual{
-				font-family: 'Nanum Gothic';
-				margin: 5px;
+				font-family: 'Nanum Gothic', 'Arial';
+				margin: 0px;
 				height: 12vh;
 			}
 			#visor {
-                font-family: 'Nanum Gothic';
-                height: 30vh;
-                margin: 5px;
+                font-family: 'Nanum Gothic', 'Arial';
+                height: 52vh;
+                margin: 0;
                 border: none;
                 display: flex;
                 resize: none;
@@ -73,11 +82,14 @@
                 text-align: right;
                 background: transparent;
             }
+
     	</style>
     	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/funcoes.js"></script>
-
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+	        app.initialize();
+	    </script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </body>
 </html>
