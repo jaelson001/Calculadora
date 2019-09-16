@@ -1,14 +1,5 @@
-# A Blank PhoneGap App
+# Calculadora com histórico em Phonegap
 
-## Usage
+como funciona
 
-### PhoneGap CLI
-
-    $ phonegap create my-app --template blank
-
-### Desktop
-
-In your browser, open the file:
-
-    /www/index.html
-
+    uma calculadora padrão que possui histórico de contas intuitivo e uma aparencia clean pra quem gosta de minimalismo
