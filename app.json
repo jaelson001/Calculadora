@@ -2,7 +2,7 @@
   "expo": {
     "name": "calculadora-react",
     "slug": "calculadora-react",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -24,7 +24,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.jaelson001.calculadorareact"
+      "package": "com.jaelson001.calculadorareact",
+      "permissions":[]
     },
     "web": {
       "favicon": "./assets/favicon.png"
